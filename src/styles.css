@@ -1,0 +1,30 @@
+body {
+  text-align: center;
+  background: linear-gradient(-225deg, #cbbacc 0%, #2580b3 100%);
+}
+
+h1 {
+  color: #113f67;
+  font-size: 45px;
+  font-weight: 900;
+}
+
+.row-search-city {
+  position: static;
+  display: inline-block;
+}
+
+.current-city,
+.search-city {
+  position: relative;
+  top: -2px;
+}
+
+.card {
+  background: linear-gradient(
+    179.7deg,
+    rgb(197, 214, 227) 2.9%,
+    rgb(144, 175, 202) 97.1%
+  );
+  border-radius: 10px;
+}
