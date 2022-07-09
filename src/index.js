@@ -25,6 +25,7 @@ function showWeather(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
   document.querySelector("#temp-min").innerHTML = Math.round(
@@ -71,7 +72,27 @@ function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(retrievePostion);
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault;
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  document.querySelector("#temperature").innerHTML = Math.round(
+    fahrenheitTemperature
+  );
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault;
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celsiusTemperature);
+}
+
 let button = document.querySelector("#current-city-button");
 button.addEventListener("click", getCurrentPosition);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Tokyo");
