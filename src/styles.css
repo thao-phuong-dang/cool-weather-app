@@ -9,6 +9,16 @@ h1 {
   font-weight: 900;
 }
 
+.units {
+  font-size: 21px;
+  position: relative;
+  top: -18px;
+}
+
+.icon-image {
+  width: 5%;
+}
+
 .row-search-city {
   position: static;
   display: inline-block;

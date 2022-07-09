@@ -33,6 +33,12 @@ function showWeather(response) {
   document.querySelector("#temp-max").innerHTML = Math.round(
     response.data.main.temp_max
   );
+  document
+    .querySelector("#weather-icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 function search(city) {
