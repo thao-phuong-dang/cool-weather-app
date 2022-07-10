@@ -26,23 +26,41 @@
         
       </h5>
       <h1>
-             <span class="temperature" id="temperature">19</span
+        <div class="clearfix weather-temperature">
+             <span id="temperature"></span
                 ><span class="units">
-                  <small>
-                  <a href="#" id="celsius-link" class="float-right">°C</a> |
-                  <a href="#" id="fahrenheit-link" class="float-right">°F</a>
+                  <small class="float-right">
+                  <a href="#" id="celsius-link" class = "active">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
                </small> </span>       
-      </h1>
+      </div>
+              </h1>
       </div>
       <div>
         <img class="icon-image" id="weather-icon" src=""></i>
        </div>
       <h6>
          <div id="description"></div>
-         <br>
-        Lowest: <span id="temp-min"></span>℃　/　
-        Highest: <span id="temp-max"></span>℃
-      </h6>
+         <div class="container">
+            <div class="row">
+            <div class="col">
+              Lowest: <span id="temp-min"></span>℃
+            </div>
+            <div class="col">
+              Wind: <span id="wind-speed"></span>km/h
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+              Highest: <span id="temp-max"></span>℃
+              <br />
+            </div>
+            <div class="col">
+              Humidity: <span id="humidity"></span>%
+            </div>
+            </div>
+            </div>
+            </h6>
       <br />
 <form id="search-form">
       <div class="row-search-city">
@@ -92,8 +110,6 @@
           </div>
           </p>
 
-          
-<br>
 <p>
         
     <div class="card">
