@@ -68,3 +68,7 @@ a:hover {
   backdrop-filter: blur(3px);
   background-color: rgba(250, 250, 250, 0.025);
 }
+
+.weather-forecast-temp-min {
+  opacity: 0.5;
+}
