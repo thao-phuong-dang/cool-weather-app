@@ -20,6 +20,31 @@ if (minute < 10) {
 }
 document.querySelector("h5").innerHTML = `${day} ${hour}:${minute}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+              <div class="weather-forecast-date">${day}</div>
+              <img
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt=""
+                width="42"
+              />
+              <div class="weather-forecast-temp">
+                <span class="weather-forecast-temp-max">20°</span>
+                <span class="weather-forecast-temp-min">15°</span>
+              </div>
+            </div>
+            `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showWeather(response) {
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -110,3 +135,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Tokyo");
+displayForecast();

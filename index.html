@@ -10,7 +10,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-     <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/styles.css" />
     <script
       src="https://kit.fontawesome.com/1833d563cf.js"
       crossorigin="anonymous"
@@ -19,85 +19,82 @@
 
   <body>
     <div class="container">
-      <h1 id="city">
-        
-      </h1>
-      <h5>
-        
-      </h5>
+      <h1 id="city"></h1>
+      <h5></h5>
       <h1>
         <div class="clearfix weather-temperature">
-             <span id="temperature"></span
-                ><span class="units">
-                  <small class="float-right">
-                  <a href="#" id="celsius-link" class = "active">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
-               </small> </span>       
-      </div>
-              </h1>
-      </div>
-      <div>
-        <img class="icon-image" id="weather-icon" src=""></i>
-       </div>
-      <h6>
-         <div id="description"></div>
-         <div class="container">
-            <div class="row">
-            <div class="col">
-              Lowest: <span id="temp-min"></span>℃
-            </div>
-            <div class="col">
-              Wind: <span id="wind-speed"></span>km/h
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-              Highest: <span id="temp-max"></span>℃
-              <br />
-            </div>
-            <div class="col">
-              Humidity: <span id="humidity"></span>%
-            </div>
-            </div>
-            </div>
-            </h6>
-      <br />
-<form id="search-form">
-      <div class="row-search-city">
-          <div class="col">
-            <input id="search-city" type="text" class="form-control" id="city-input" placeholder="Enter a city">
-          </div>
+          <span id="temperature"></span
+          ><span class="units">
+            <small class="float-right">
+              <a href="#" id="celsius-link" class="active">°C</a> |
+              <a href="#" id="fahrenheit-link">°F</a>
+            </small>
+          </span>
         </div>
-        <button id="search-button" type="submit" class="btn btn-success search-city">Search</button>
-
-         <button id="current-city-button" type="submit" class="btn btn-primary current-city">Current Location</button>
-      <p>
-        </form>
-        
-     <div class="card">
-              <div class="card-body">
-          <div class="row">
-            <div class="col-3">
-              <div class="weather-forecast-date">Monday</div>
-              <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" width="42">
-              <div class="weather-forecast-temp">
-                <span class="weather-forecast-temp-max">20°</span>
-                <span class="weather-forecast-temp-min">15°</span>
-                </div>
-            </div>
-            </div>
-          </div>
-          </div>
-    </p>
-          
-     
+      </h1>
     </div>
-<p>
-  <small>
-  <a href="https://github.com/thao-phuong-dang/cool-weather-app">
-    Open-source code</a> by Thao Dang
-  </small>
-</p>
+    <div>
+      <img class="icon-image" id="weather-icon" src="" />
+    </div>
+    <h6>
+      <div id="description"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col">Lowest: <span id="temp-min"></span>℃</div>
+          <div class="col">Wind: <span id="wind-speed"></span>km/h</div>
+        </div>
+        <div class="row">
+          <div class="col">
+            Highest: <span id="temp-max"></span>℃
+            <br />
+          </div>
+          <div class="col">Humidity: <span id="humidity"></span>%</div>
+        </div>
+      </div>
+    </h6>
+    <br />
+    <form id="search-form">
+      <div class="row-search-city">
+        <div class="col">
+          <input
+            id="search-city"
+            type="text"
+            class="form-control"
+            id="city-input"
+            placeholder="Enter a city"
+          />
+        </div>
+      </div>
+      <button
+        id="search-button"
+        type="submit"
+        class="btn btn-success search-city"
+      >
+        Search
+      </button>
+
+      <button
+        id="current-city-button"
+        type="submit"
+        class="btn btn-primary current-city"
+      >
+        Current Location
+      </button>
+      <p></p>
+    </form>
+    <div class="card">
+      <div class="card-body">
+        <div class="weather-forecast" id="forecast"></div>
+      </div>
+    </div>
+    <p>
+      <small>
+        <a href="https://github.com/thao-phuong-dang/cool-weather-app">
+          Open-source code</a
+        >
+        by Thao Dang
+      </small>
+    </p>
     <script src="src/index.js"></script>
   </body>
 </html>
