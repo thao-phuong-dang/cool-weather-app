@@ -69,6 +69,10 @@ a:hover {
   background-color: rgba(250, 250, 250, 0.025);
 }
 
+#forecast {
+  font-size: 14px;
+}
+
 .weather-forecast-temp-min {
   opacity: 0.5;
 }
